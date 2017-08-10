@@ -1,8 +1,5 @@
 package ir.phgint;
 
-/**
- * Created by Jamile on 8/10/2017.
- */
 public class ForkBuffer {
 
     public   int maxFork;
@@ -11,7 +8,6 @@ public class ForkBuffer {
     public ForkBuffer(int maxFork) {
         this.maxFork = maxFork;
     }
-
 
     public synchronized boolean acquireFork() {
         if(count < maxFork) {

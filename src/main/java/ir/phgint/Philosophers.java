@@ -12,6 +12,10 @@ public class Philosophers extends Thread {
         this.id = id;
     }
 
+    public void setIsRunning(boolean isRunning) {
+        this.isRunning = isRunning;
+    }
+
     public void run() {
 
         while (isRunning) {

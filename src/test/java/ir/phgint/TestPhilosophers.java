@@ -22,6 +22,22 @@ public class TestPhilosophers {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        for (int i = 0; i <fb.maxFork ; i++) {
+
+            philosophersList[i].setIsRunning(false);
+
+        }
+        for (int i = 0; i <fb.maxFork ; i++) {
+
+            try {
+                philosophersList[i].join(0);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+        }
+
     }
 
 
